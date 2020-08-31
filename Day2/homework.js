@@ -187,3 +187,4 @@ if (bmi < 16) {
 alert(
   "Your BMI is " + Math.round(bmi * 100) / 100 + " and you are " + verdict + "."
 );
+
