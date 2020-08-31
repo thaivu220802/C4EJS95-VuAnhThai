@@ -1,0 +1,3 @@
+Question 1: 
+1. var and const in JavaScript are two different ways to define a variable in JavaScript.
+Bo
