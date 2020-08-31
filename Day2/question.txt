@@ -1,12 +1,16 @@
 Question 1: 
 1. var and const in JavaScript are two different ways to define a variable in JavaScript.
-2. 
+2. var is function scoped i.e. available for reference in the entire function, whereas let is block scoped i.e. only referenceable in a {} or [] code block.
 3. A variable declared by const cannot be changed, but a variable declared by let can.
 4. 
 - var: avoid using var, as its usage is antiquated.
-
+- let: use it when you want the variable to be changeable.
+- const: use it when you want the variable to be immutable i.e. cannot be changed.
 
 Question 2:
+1. Boolean is a primitive data type commonly used in programming languages, consisting of only two values: true and false.
+2. E.g. in conditions, when a variable must be coerced into a boolean. The majority of values will result in true (called "truthy values"), but some will result in false (called "falsy values").
 
-
-Question 3: (the difference between strings and template strings)
+Question 2+: (the difference between strings and template strings)
+- Strings are surrounded by "" or '', whereas template strings are surrounded by ``.
+- Template strings allows for string interpolation and multi-line strings.
