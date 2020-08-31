@@ -1,3 +1,12 @@
 Question 1: 
 1. var and const in JavaScript are two different ways to define a variable in JavaScript.
-Bo
+2. 
+3. A variable declared by const cannot be changed, but a variable declared by let can.
+4. 
+- var: avoid using var, as its usage is antiquated.
+
+
+Question 2:
+
+
+Question 3: (the difference between strings and template strings)
