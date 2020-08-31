@@ -188,3 +188,63 @@ alert(
   "Your BMI is " + Math.round(bmi * 100) / 100 + " and you are " + verdict + "."
 );
 
+/* Question 10.
+Use JS Turtle to draw the following shapes
+a. A square
+*/
+
+for (let i = 1; i <= 4; i++) {
+  fd(50);
+  rt(90);
+}
+
+/*
+b. A triangle
+*/
+
+for (let i = 1; i <= 3; i++) {
+  fd(50);
+  rt(120);
+}
+
+/* 
+c. A pentagon
+*/
+
+for (let i = 1; i <= 5; i++) {
+  fd(50);
+  rt(72);
+}
+
+/*
+d. A hexagon
+*/
+
+for (let i = 1; i <= 6; i++) {
+  fd(50);
+  rt(60);
+}
+
+/* Question 11.
+11.	Use JS Turtle to draw a polygon, the number of polygon’s edges entered by users
+*/
+
+const n = prompt("Enter the number of edges:");
+
+for (let i = 1; i <= n; i++) {
+  fd(50);
+  rt(180 - (180 * (n - 2)) / n);
+}
+
+/* Question 12.
+12. Use JS Turtle to draw n polygons, n entered by users
+*/
+
+const n = prompt("How many polygons?");
+
+for (let i = 3; i <= parseInt(n) + 2; i++) {
+  for (let j = 1; j <= i; j++) {
+    fd(50);
+    rt(180 - (180 * (i - 2)) / i);
+  }
+}
