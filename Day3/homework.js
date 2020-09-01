@@ -1,3 +1,34 @@
+// 1a. Variable swap with temporary variables
+
+let a = 5;
+let b = 6;
+let temp = 0;
+
+temp = a;
+a = b;
+b = temp;
+
+console.log(a, b);
+
+// 1b. Variable swap WITHOUT temporary variables (destructuring approach)
+
+let a = 5;
+let b = 6;
+
+[a, b] = [b, a];
+
+console.log(a, b); 
+
+// 2. Split string into array using .split()
+
+const splitString = prompt('Enter a string:');
+const splitArr = splitString.split(' ');
+console.log(splitArr);
+
+// 3. use ... to log an array without using loops
+let testArr = [3,2,4,5,6,1,4];
+console.log(...testArr);
+
 //4.	Write a script to simulate a clothes shop, asking and performing certain tasks from users
 
 let lineup = ["Jeans", "T-Shirts", "Socks"];
@@ -68,7 +99,7 @@ for (let i = 1; i < testArr.length; i++) {
   }
 }
 
-// Code for question 8 is be stored in a file named baaa.js. Do not ask any questions.
+// Code for question 8 is stored in a file named baaa.js. Do not ask any questions.
 
 // 9.	Given the array
 
