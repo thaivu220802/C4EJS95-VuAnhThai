@@ -119,11 +119,23 @@ let books = [
 // books[books.indexOf("Book by Hung")] = "Book by Thai";
 // console.log(books);
 
-for (i = 0; i < books.length; i ++) {
-  if (books[i] === "Book by Hung"){
+for (let i = 0; i < books.length; i++) {
+  if (books[i] === "Book by Hung") {
+    books[i] = "Book by Thai";
+    break; //Optimise load
+  }
+}
+
+console.log(books);
+//
+let i = 0;
+
+while (i < books.length) {
+  if (books[i] === "Book by Hung") {
     books[i] = "Book by Thai";
     break;
   }
+  i++;
 }
 
 console.log(books);
