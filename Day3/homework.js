@@ -70,18 +70,18 @@ for (let i = 1; i < testArr.length; i++) {
 
 // 11. Write a script asking users to enter a sequence of Numbers, separated by commas (,). Create a new array containing only the odd Numbers of the entered sequence. If you need hints, they are at the end of this homework
 
-const numSeq = prompt("Enter a sequence of numbers: ");
+const numSeq = prompt("Enter a sequence of numbers, seperated by commas: ");
 const numArr = numSeq.split(",");
 let numOdd = [];
 
 for (let i = 0; i < numArr.length; i++) {
   if (numArr[i] % 2 === 1) {
-    numOdd.push(`${numArr[i]} `);
+    numOdd.push(` ${numArr[i]}`);
   }
 }
 
 if (numOdd.length === 0) {
   alert("Your sequence have no odd numbers.");
 } else {
-  alert(`The odd numbers of your sequence are: ${numOdd}.`);
+  alert(`The odd numbers of your sequence are:${numOdd}.`);
 }
