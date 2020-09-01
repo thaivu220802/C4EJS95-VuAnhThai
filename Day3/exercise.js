@@ -88,7 +88,7 @@ for (let i = 0; i < movies.length; i++) {
 // Change all items of movies array into lowercase
 
 for (let i = 0; i < movies.length; i++) {
-  movies[i] = movies[i].toLocaleLowerCase;
+  movies[i] = movies[i].toLowerCase;
 }
 
 // Write a script asking users their username, if the entered username is too long (>15 characters), tell them that and ask them to re-enter a new username, if the username is short enough (<=15 characters), tell them it is good.
