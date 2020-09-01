@@ -68,6 +68,18 @@ for (let i = 1; i < testArr.length; i++) {
   }
 }
 
+// 10. Write a script asking users to enter a sequence of names, separated by commas (,), Create a new array containing the names, each surrounded with <>. If you need hints, find them at the end of this homework
+
+const nameSeq = prompt("Enter a sequence of names, seperated by commas: ");
+const nameArr = nameSeq.split(",");
+let namePoint = [];
+
+for (let i = 0; i < nameArr.length; i ++) {
+  namePoint.push(` <${nameArr[i]}>`);
+}
+
+alert(`The resulting sequence is:${namePoint}.`);
+
 // 11. Write a script asking users to enter a sequence of Numbers, separated by commas (,). Create a new array containing only the odd Numbers of the entered sequence. If you need hints, they are at the end of this homework
 
 const numSeq = prompt("Enter a sequence of numbers, seperated by commas: ");
