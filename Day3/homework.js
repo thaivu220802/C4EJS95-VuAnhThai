@@ -68,13 +68,31 @@ for (let i = 1; i < testArr.length; i++) {
   }
 }
 
+// Code for question 8 is be stored in a file named baaa.js. Do not ask any questions.
+
+// 9.	Given the array
+
+//const colors = [‘red’, ‘gray’, ‘blue’, ‘purple’, ‘cyan’];
+
+//Use JS Turtle, to draw the following shapes
+
+const colors = ["red", "gray", "blue", "purple", "cyan"];
+
+for (let i = 0; i < colors.length; i++) {
+  color(colors[i]);
+  for (let j = 1; j <= 4; j++) {
+    fd(50 * i);
+    rt(90);
+  }
+}
+
 // 10. Write a script asking users to enter a sequence of names, separated by commas (,), Create a new array containing the names, each surrounded with <>. If you need hints, find them at the end of this homework
 
 const nameSeq = prompt("Enter a sequence of names, seperated by commas: ");
 const nameArr = nameSeq.split(",");
 let namePoint = [];
 
-for (let i = 0; i < nameArr.length; i ++) {
+for (let i = 0; i < nameArr.length; i++) {
   namePoint.push(` <${nameArr[i]}>`);
 }
 
