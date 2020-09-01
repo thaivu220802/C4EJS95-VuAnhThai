@@ -100,3 +100,30 @@ while (username.length > 15) {
   );
 }
 alert("Your username is good.");
+
+//Create an array with 10 book names, including one having the name of "Book by Hung" and swap it to "Book by you"
+
+let books = [
+  "Book1",
+  "Book2",
+  "Book3",
+  "Book4",
+  "Book5",
+  "Book by Hung",
+  "Book7",
+  "Book8",
+  "Book 9",
+  "Book10",
+];
+
+// books[books.indexOf("Book by Hung")] = "Book by Thai";
+// console.log(books);
+
+for (i = 0; i < books.length; i ++) {
+  if (books[i] === "Book by Hung"){
+    books[i] = "Book by Thai";
+    break;
+  }
+}
+
+console.log(books);
