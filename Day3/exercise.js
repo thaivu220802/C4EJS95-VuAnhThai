@@ -150,18 +150,18 @@ for (let i = 0; i < billAmounts.length; i ++){
   let tipValue = 0;
   let paidValue = 0;
   if(billAmounts[i] < 50) {
-    tipValue = billAmounts[i] * 0.2;
+    tipValue = billAmounts[i] * 2 / 10;
     paidValue = tipValue + billAmounts[i];
   } else if (billAmounts[i] > 200) {
-    tipValue = billAmounts[i] * 0.1;
+    tipValue = billAmounts[i] / 10;
     paidValue = tipValue + billAmounts[i];
   } else {
-    tipValue = billAmounts[i] * 0.15;
+    tipValue = billAmounts[i] * 15 / 100;
     paidValue = tipValue + billAmounts[i];
   }
   tipAmounts.push(` ${tipValue}`);
-  paidAmounts.pish(` ${paidValue}`);
+  paidAmounts.push(` ${paidValue}`);
 }
 
 console.log(`All three tips:${tipAmounts}.`);
-console.log(`All final paid amounts:${tipAmounts}.`);
+console.log(`All final paid amounts:${paidAmounts}.`);
