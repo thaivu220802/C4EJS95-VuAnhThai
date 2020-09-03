@@ -2,8 +2,9 @@
 
 let flockSize = [13, 110, 159, 295, 323, 609, 794, 813, 852, 948];
 console.log(
-  `Hello, my name is Anh Thai, and here is the size of my flock: ${flockSize}.`
+  `Hello, my name is Anh Thai, and here is the size of my flock:`
 );
+console.log(...flockSize);
 
 // 8.2. At the end of each month, you have to choose one and only one sheep to shear and thus you want to choose the biggest one to maximize your profit. Add scripts to search for the biggest sheep in your list:
 
@@ -24,14 +25,16 @@ for (let i = 0; i < flockSize.length; i++) {
     flockSize[i] = 8;
   }
 }
-console.log(`Here is my flock after shaving: ${flockSize}.`);
+console.log(`Here is my flock after shaving:`);
+console.log(...flockSize);
 
 // 8.4.	In the following month, EVERY sheep in your flock grow, they have their size increased by 50. Log them out
 console.log("MONTH 1");
 for (let i = 0; i < flockSize.length; i++) {
   flockSize[i] = flockSize[i] + 50;
 }
-console.log(`My flock has grown to ${flockSize}.`);
+console.log(`My flock has grown to:`);
+console.log(...flockSize);
 
 // 8.5. Let's do this for 4 months
 for (let month = 2; month <= 4; month++) {
@@ -49,12 +52,14 @@ for (let month = 2; month <= 4; month++) {
       flockSize[i] = 8;
     }
   }
-  console.log(`Here is my flock after shaving: ${flockSize}.`);
+  console.log(`Here is my flock after shaving:`);
+  console.log(...flockSize);
   console.log(`MONTH ${month}`);
   for (let i = 0; i < flockSize.length; i++) {
     flockSize[i] = flockSize[i] + 50;
   }
-  console.log(`My flock has grown to ${flockSize}.`);
+  console.log(`My flock has grown to:`);
+  console.log(...flockSize);
 }
 
 // 8.6. Calculate total size and total earnings
