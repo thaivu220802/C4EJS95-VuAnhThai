@@ -74,4 +74,4 @@ console.log(
   `After selling this flock, I will get ${flockTotal} * 2 USD = ${
     flockTotal * 2
   } USD.`
-);
+)
