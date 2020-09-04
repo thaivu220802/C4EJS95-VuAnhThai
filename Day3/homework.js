@@ -17,24 +17,24 @@ let b = 6;
 
 [a, b] = [b, a];
 
-console.log(a, b); 
+console.log(a, b);
 
 // 2. Split string into array using .split()
 
-const splitString = prompt('Enter a string:');
-const splitArr = splitString.split(' ');
+const splitString = prompt("Enter a string:");
+const splitArr = splitString.split(" ");
 console.log(splitArr);
 
 // 3. use ... to log an array without using loops
-let testArr = [3,2,4,5,6,1,4];
+let testArr = [3, 2, 4, 5, 6, 1, 4];
 console.log(...testArr);
 
 //4.	Write a script to simulate a clothes shop, asking and performing certain tasks from users
 
 let lineup = ["Jeans", "T-Shirts", "Socks"];
-let options = ["C", "R", "U", "D"];
+const options = ["C", "R", "U", "D"];
 
-let choice = prompt(
+const choice = prompt(
   "Hi there, welcome to shop admin panel, what do you want [C, R, U, D]? "
 ).toUpperCase();
 
@@ -45,13 +45,16 @@ while (options.indexOf(choice) < 0) {
 if (choice === "R") {
   console.log("The current items are:");
   for (let i = 0; i < lineup.length; i++) {
-    console.log(i + 1 + ". " + lineup[i]);
+    console.log(`${i + 1}. ${lineup[i]}`);
   }
 } else if (choice === "C") {
   const newItem = prompt("Enter the name of the new item: ");
   lineup.push(newItem);
 } else if (choice === "U") {
-  const updateIndex = prompt("Enter the position you want to update: ");
+  let updateIndex = prompt("Enter the position you want to update: ");
+  while (updateIndex >= lineup.length) {
+    updateIndex = prompt("Invalid input. Please try again");
+  }
   const updateItem = prompt("Enter the name of the new item: ");
   lineup[updateIndex - 1] = updateItem;
 } else if (choice === "D") {
@@ -63,10 +66,13 @@ if (choice === "R") {
 
 const numSeq = prompt("Enter a sequence of numbers, seperated by commas: ");
 const numArr = numSeq.split(",");
+for (let i = 0; i < numArr.length; i ++) {
+  numArr[i] = parseInt(numArr[i]);
+}
 let sum = 0;
 
 for (let i = 0; i < numArr.length; i++) {
-  sum = numArr[i];
+  sum = numArr[i] + sum;
 }
 
 alert(`The sum of the numbers is ${sum}.`);
@@ -90,13 +96,19 @@ alert(`The smallest number of the sequence is ${min}.`);
 const testArr = [3, 4, 6, -9, 10, -88, 2];
 const testNum = prompt("Enter a number: ");
 
-for (let i = 1; i < testArr.length; i++) {
+let found = false;
+
+for (let i = 0; i < testArr.length; i++) {
   if (testArr[i] === testNum) {
-    alert(`${testNum} is found in my array at index ${i}.`);
+    found = true;
     break;
-  } else {
-    alert(`${testNum} is not found in my array.`);
   }
+}
+
+if (found) {
+  alert(`${testNum} is found in my array at index ${i}.`);
+} else {
+  alert(`${testNum} is not found in my array.`);
 }
 
 // Code for question 8 is stored in a file named baaa.js. Do not ask any questions.
@@ -141,7 +153,7 @@ for (let i = 0; i < numArr.length; i++) {
   }
 }
 
-if (numOdd.length === 0) {
+if (numOdd.length) {
   alert("Your sequence have no odd numbers.");
 } else {
   alert(`The odd numbers of your sequence are:${numOdd}.`);
