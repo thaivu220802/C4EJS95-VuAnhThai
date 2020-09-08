@@ -12,4 +12,4 @@ let song = {
 console.log(song.title);
 console.log(`Year: ${song.year}`);
 console.log(`Rate: ${song.rate}`);
-console.log(`Singers: ` + ...song.singers);
+console.log(`Singers: ${song.singers}`);

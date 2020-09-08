@@ -81,8 +81,7 @@ const numArr = numSeq.split(",").map(x => parseInt(x));
 numArr.sort(function(a,b) {
   return a-b;
 })
-
-alert(`The smallest number of the sequence is ${min}.`);
+alert(`The smallest number of the sequence is ${numArr[0]}.`);
 
 //7.	Create an array containing at least 5 numbers, then ask users enter a number, perform a search to look for the number in the array, if the number is found, tell user that with the index of it in the array, if not, also tell them so
 

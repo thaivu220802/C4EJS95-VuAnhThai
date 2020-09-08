@@ -30,9 +30,7 @@ console.log(...flockSize);
 
 // 8.4.	In the following month, EVERY sheep in your flock grow, they have their size increased by 50. Log them out
 console.log("MONTH 1");
-for (let i = 0; i < flockSize.length; i++) {
-  flockSize[i] = flockSize[i] + 50;
-}
+flockSize.map(x => x + 50);
 console.log(`My flock has grown to:`);
 console.log(...flockSize);
 
@@ -55,9 +53,7 @@ for (let month = 2; month <= 4; month++) {
   console.log(`Here is my flock after shaving:`);
   console.log(...flockSize);
   console.log(`MONTH ${month}`);
-  for (let i = 0; i < flockSize.length; i++) {
-    flockSize[i] = flockSize[i] + 50;
-  }
+  flockSize.map(x => x + 50);
   console.log(`My flock has grown to:`);
   console.log(...flockSize);
 }
