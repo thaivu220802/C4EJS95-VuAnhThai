@@ -77,14 +77,10 @@ alert(`The sum of the numbers is ${sum}.`);
 // 6.	Write a script asking users to enter a sequence of numbers, the numbers are separated by commas, find the smallest number and log it out to users
 
 const numSeq = prompt("Enter a sequence of numbers, seperated by commas; ");
-const numArr = numSeq.split(",");
-let min = numArr[0];
-
-for (let i = 1; i < numArr.length; i++) {
-  if (numArr[i] < min) {
-    min = numArr[i];
-  }
-}
+const numArr = numSeq.split(",").map(x => parseInt(x));
+numArr.sort(function(a,b) {
+  return a-b;
+})
 
 alert(`The smallest number of the sequence is ${min}.`);
 
