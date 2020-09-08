@@ -65,13 +65,10 @@ if (choice === "R") {
 // 5.	Write a script to ask users enter a sequence of numbers, the numbers are separated by commas, calculate the sum of the numbers and show it to users
 
 const numSeq = prompt("Enter a sequence of numbers, seperated by commas: ");
-const numArr = numSeq.split(",");
-for (let i = 0; i < numArr.length; i ++) {
-  numArr[i] = parseInt(numArr[i]);
-}
-let sum = 0;
+const numArr = numSeq.split(",").map(x => parseInt(x));
 
-for (let i = 0; i < numArr.length; i++) {
+let sum = numArr[0];
+for (let i = 1; i < numArr.length; i++) {
   sum = numArr[i] + sum;
 }
 
