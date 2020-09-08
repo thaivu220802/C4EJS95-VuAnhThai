@@ -240,11 +240,12 @@ for (let i = 1; i <= n; i++) {
 12. Use JS Turtle to draw n polygons, n entered by users
 */
 
-const n = prompt("How many polygons?");
+const LIMIT = prompt("How many polygons?");
+const LENGTH = 50;
 
-for (let i = 3; i <= parseInt(n) + 2; i++) {
-  for (let j = 1; j <= i; j++) {
-    fd(50);
-    rt(180 - (180 * (i - 2)) / i);
+for (let i = 3; i < parseInt(LIMIT) + 3; i++) {
+  for (let j = 0; j < i; j++) {
+    fd(LENGTH);
+    rt(360/i);
   }
 }
