@@ -1,3 +1,21 @@
+// bubblesort
+
+function bubbleSort (arr) {
+    for (let i = 0; i < arr.length; i ++) {
+        let unswap = true;
+        for (let j = 0; j < arr.length - 1 - i; j ++) {
+            if (arr[j] > arr[j+1]) {
+                [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+                unswap = false;
+            }
+        }
+        if (unswap) {
+            break;
+        }
+    }
+    return arr;
+}
+
 // 1. Run the following code, observe and then answer the questions
 
 const product = {
@@ -143,7 +161,7 @@ products[3].provider = ["tgdd"];
 for (let i = 0; i < length; i++) {
   console.log(`#${i + 1}. ${products[i].name}`);
   console.log(`    Price: ${products[i].price}`);
-  console.log(`    Providers: ${products[i].provider}`);
+  console.log(`    Providers: ${products[i].provider.join(' ')}`);
 }
 
 // 5.5. Search product based on wanted provider
