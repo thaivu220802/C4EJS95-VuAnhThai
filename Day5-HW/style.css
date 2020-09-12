@@ -1,0 +1,9 @@
+.demo {
+    color: red;
+    text-decoration: underline;
+}
+
+#only {
+    color: blue;
+    text-decoration: underline;
+}
