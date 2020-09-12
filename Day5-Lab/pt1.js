@@ -80,8 +80,7 @@ Enter a number from 1 to 4 to select your answer:`);
       `Wrong answer. Your score is still ${score}. ${QUIZ_LENGTH - i - 1} question(s) remain.`
     );
   }
-  console.log(quizQuestionRem);
 }
 
 alert(`We're out of questions! Your score is ${score}.`);
-//
+
