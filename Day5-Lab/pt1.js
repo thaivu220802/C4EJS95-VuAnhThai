@@ -52,7 +52,7 @@ for (let i = 0; i < QUIZ_LENGTH; i++) {
   let quizRand = parseInt(quizQuestionRem[i]);
   const quizQ = QUIZ[quizRand].question;
   const quizA = QUIZ[quizRand].rightChoice;
-  let quizChoices = [QUIZ[quizRand].choice1, QUIZ[quizRand].choice2, QUIZ[quizRand].choice3, QUIZ[quizRand].choice4];
+  let quizChoices = QUIZ[quizRand].choices;
   quizChoices = shuffleArr(quizChoices);
   quizChoices.unshift(null);
   let quizChoice = parseInt(prompt(`Question ${1 + i} out of ${QUIZ_LENGTH}: ${quizQ}
