@@ -2,7 +2,7 @@ export const QUIZ =
 [
   {
     "question": "Where did Novak Djokovic strike a US Open lineswoman with an errant ball?",
-    "choices": ["abdomen", "chest", "head", "throat"],
+    "choices": ["abdomen", "chest", "head", "throat", "spine"],
     "rightChoice": "throat"
   },
   {

@@ -55,20 +55,21 @@ for (let i = 0; i < QUIZ_LENGTH; i++) {
   let quizChoices = QUIZ[quizRand].choices;
   quizChoices = shuffleArr(quizChoices);
   quizChoices.unshift(null);
+  let quizChoiceFormat = "";
+  for (let i = 1; i < quizChoices.length; i ++) {
+      quizChoiceFormat = `${quizChoiceFormat}
+${i}. ${quizChoices[i]}`
+  }
   let quizChoice = parseInt(prompt(`Question ${1 + i} out of ${QUIZ_LENGTH}: ${quizQ}
-1. ${quizChoices[1]}
-2. ${quizChoices[2]}
-3. ${quizChoices[3]}
-4. ${quizChoices[4]}
-Enter a number from 1 to 4 to select your answer:`));
+${quizChoiceFormat}
+
+Enter a number from 1 to ${quizChoices.length - 1} to select your answer:`));
   while (QUIZ_CHOICES.indexOf(String(quizChoice)) < 0) {
     quizChoice = prompt(`Invalid input. Please try again.
 Question ${1 + i} out of ${QUIZ_LENGTH}: ${quizQ}
-1. ${quizChoices[1]}
-2. ${quizChoices[2]}
-3. ${quizChoices[3]}
-4. ${quizChoices[4]}
-Enter a number from 1 to 4 to select your answer:`);
+${quizChoiceFormat}
+
+Enter a number from 1 to ${quizChoices.length - 1} to select your answer:`);
   }
   if (quizChoices[quizChoice] === quizA) {
     score++;
