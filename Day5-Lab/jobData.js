@@ -930,7 +930,7 @@ export const jobData = {
     ]
 }
 
-const inventory = [
+export const inventory = [
     {
         name: "HP Envy 13aq",
         price: 21000,
