@@ -1,0 +1,98 @@
+body {
+  font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial,
+    "Lucida Grande", sans-serif;
+  padding: 0;
+  background: #fff;
+  color: #181a1b;
+  margin: 2em 10em 2em 10em;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 1em 5em 1em 5em;
+  }
+}
+
+#header h1 {
+  font-size: 2em;
+  line-height: 0.5em;
+  margin-top: 1.75em;
+  font-weight: 700;
+}
+
+#header h2 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+  font-weight: 400;
+  margin-bottom: 1.75em;
+}
+
+#intro p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.study h1 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 2em;
+  color: rgb(0, 78, 0);
+  word-break: break-all;
+}
+
+.study h2 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 2em;
+  color: rgba(94, 95, 94, 0.9);
+  font-weight: 400;
+}
+
+.study p {
+  line-height: 1.2em;
+  margin-bottom: 0em;
+}
+
+.work h1 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 2em;
+  color: rgb(0, 78, 0);
+  word-break: break-all;
+}
+
+.work h2 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 2em;
+  color: rgba(94, 95, 94, 0.9);
+  font-weight: 400;
+}
+
+.work p {
+  line-height: 1.2em;
+}
+
+.work ul {
+  line-height: 1.2em;
+  margin-left: 0;
+}
+
+footer {
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin-top: 1.75em;
+  font-weight: 700;
+}
+
+a {
+    color: #181a1b;
+    text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 148, 3);
+}
