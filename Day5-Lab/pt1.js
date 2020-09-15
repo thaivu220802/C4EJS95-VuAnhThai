@@ -49,18 +49,23 @@ let score = 0;
 quizQuestionRem = shuffleArr(quizQuestionRem);
 
 for (let i = 0; i < QUIZ_LENGTH; i++) {
+  //Get index of next question
   let quizRand = parseInt(quizQuestionRem[i]);
+  //Get questions, answers and correct answer
   const quizQ = QUIZ[quizRand].question;
   const quizAind = QUIZ[quizRand].rightChoiceIndex
   const quizA = QUIZ[quizRand].choices[quizAind];
   let quizChoices = QUIZ[quizRand].choices;
+  //Shuffle answer
   quizChoices = shuffleArr(quizChoices);
   quizChoices.unshift(null);
+  // Format question
   let quizChoiceFormat = "";
   for (let i = 1; i < quizChoices.length; i ++) {
       quizChoiceFormat = `${quizChoiceFormat}
 ${i}. ${quizChoices[i]}`
   }
+  //Display question and answers, validate input
   let quizChoice = parseInt(prompt(`Question ${1 + i} out of ${QUIZ_LENGTH}: ${quizQ}
 ${quizChoiceFormat}
 
@@ -72,6 +77,7 @@ ${quizChoiceFormat}
 
 Enter a number from 1 to ${quizChoices.length - 1} to select your answer:`);
   }
+  //Check answer, change score
   if (quizChoices[quizChoice] === quizA) {
     score++;
     alert(
