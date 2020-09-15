@@ -51,7 +51,8 @@ quizQuestionRem = shuffleArr(quizQuestionRem);
 for (let i = 0; i < QUIZ_LENGTH; i++) {
   let quizRand = parseInt(quizQuestionRem[i]);
   const quizQ = QUIZ[quizRand].question;
-  const quizA = QUIZ[quizRand].rightChoice;
+  const quizAind = QUIZ[quizRand].rightChoiceIndex
+  const quizA = QUIZ[quizRand].choices[quizAind];
   let quizChoices = QUIZ[quizRand].choices;
   quizChoices = shuffleArr(quizChoices);
   quizChoices.unshift(null);
