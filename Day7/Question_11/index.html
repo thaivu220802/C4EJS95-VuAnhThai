@@ -13,23 +13,29 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="col-xs-5">
-      <input
-        type="text"
-        name="name"
-        class="form-text"
-        placeholder="Enter your name"
-        id="name_input"
-      />
+    <div class="row">
+      <div class="col-xs-7">
+        <input
+          type="text"
+          name="name"
+          class="form-text"
+          placeholder="Enter your name"
+          id="name_input"
+          required
+        />
+      </div>
+      <div class="col-xs-5">
+        <button
+          type="submit"
+          id="upper_btn"
+          onclick="createUpper()"
+          class="btn btn-primary btn-sm"
+        >
+          Upper it!!!
+        </button>
+      </div>
     </div>
-    <button
-      id="upper_btn"
-      onclick="createUpper()"
-      class="btn btn-primary btn-sm"
-    >
-      Upper it!!!
-    </button>
-    <br>
+    <br />
     <div id="result_div">Your result will appear here.</div>
     <script src="script.js"></script>
   </body>
