@@ -20,7 +20,6 @@ startBtn.onclick = () => {
     } else {
         count = parseInt(timeInput.value);
     }
-    // timeDisplay.innerHTML = count;
     countdownTimer = setInterval(timer, 1000)
     function timer() {
         if (count < 0) {
