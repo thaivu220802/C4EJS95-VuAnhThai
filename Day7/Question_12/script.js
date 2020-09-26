@@ -1,4 +1,14 @@
 // Initialize a variable named items to store the data above, log/print it out
+
+
+function remove(num) {
+  console.log("Remove");
+  console.log(`Index: ${num}`);
+  console.log(items);
+  let remover = document.getElementById(`${num}`);
+  remover.parentElement.remove();
+}
+
 let items = ["Backpack", "MiBand watch", "Ring"];
 
 // In HTML, create an <ul> with some test items.
@@ -6,9 +16,10 @@ let container = document.getElementById("list");
 for (let x of items) {
   container.insertAdjacentHTML(
     "beforeend",
-    `<li>${x} <button class="remove">Remove</button> </li>`
+    `<li>${x} <button class="remove" onclick="remove(${items.indexOf(x)})" id="${items.indexOf(x)}">Remove</button> </li>`
   );
 }
+let addIndex = items.length
 
 // Get (Read) the list from DOM
 console.log(container);
@@ -24,22 +35,9 @@ addButton.onclick = () => {
   console.log(newItem.value);
   container.insertAdjacentHTML(
     "beforeend",
-    `<li>${newItem.value} <button class="remove">Remove</button> </li>`
+    `<li>${newItem.value} <button class="remove" onclick="remove(${addIndex})" id="${addIndex}">Remove</button> </li>`
   );
   items.push(newItem.value);
+  addIndex ++;
   newItem.value = "";
 };
-
-let removeButton = document.getElementsByClassName("remove");
-// let length = removeButton.length;
-for (let i = 0; i < items.length; i++) {
-  const remover = removeButton[i];
-  remover.onclick = () => {
-    console.log("Remove");
-    console.log(`Index: ${i}`);
-    items.splice(i, 1);
-    console.log(items);
-    console.log(remover.parentElement);
-    remover.parentElement.remove();
-  };
-}
