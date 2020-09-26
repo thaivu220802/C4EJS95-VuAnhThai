@@ -1,0 +1,19 @@
+body {
+    margin-top: 40%;
+    font-family: 'SF Mono', 'Courier New', Courier, monospace;
+}
+
+input {
+    text-align: right;
+}
+
+#startBtn {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+#stopBtn {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+

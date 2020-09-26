@@ -1,0 +1,25 @@
+body {
+    font-family: 'SF Mono', 'Courier New', Courier, monospace;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    margin-left: 5px;
+}
+
+
+img {
+    height: 100px;
+    cursor: pointer;
+}
