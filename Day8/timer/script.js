@@ -7,10 +7,19 @@ const timeOutBeep = document.getElementById("timeOut")
 let countdownTimer;
 
 startBtn.onclick = () => {
+    let count;
     if (!/^\d+$/.test(timeInput.value)) {
-        return;
+        if(!/^\d+\:\d{2}$/.test(timeInput.value)) {
+            alert("Invalid time input");
+            timeInput.value = "";
+            return;
+        } else {
+            let calculateSecond = timeInput.value.split(":").map(x => parseInt(x));
+            count = calculateSecond[0] * 60 + calculateSecond[1];
+        }
+    } else {
+        count = parseInt(timeInput.value);
     }
-    let count = parseInt(timeInput.value);
     // timeDisplay.innerHTML = count;
     countdownTimer = setInterval(timer, 1000)
     function timer() {
