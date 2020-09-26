@@ -1,12 +1,36 @@
-let count = 0
-let clickBtn = document.getElementById("clickbtn")
-clickBtn.addEventListener("click", function () {
-    count ++;
-    clickBtn.innerHTML = "Continue!";
-    if (count === 1) {
-        document.getElementById("alert").innerHTML = `This button has been clicked ${count} time.`
+// Initialize elements
+let username = document.getElementById("username")
+let password = document.getElementById("password")
+let loginBtn = document.getElementById("loginBtn")
+
+// Add event listener
+loginBtn.addEventListener("click", function () {
+    if ((username.value == "admin") && (password.value === "123456")) {
+        alert("Login successful!");
+        window.location.href = "product.html";
     } else {
-        document.getElementById("alert").innerHTML = `This button has been clicked ${count} times.`
+        document.getElementById("notice").innerHTML = "Invalid username or password."
     }
-});
-console.dir(clickBtn);
+})
+
+username.addEventListener("keyup", function (key) {
+    if (key.key === "Enter") {
+        if ((username.value === "admin") && (password.value === "123456")) {
+            alert("Login successful!");
+            window.location.href = "product.html";
+        } else {
+            document.getElementById("notice").innerHTML = "Invalid username or password."
+        }
+    }
+})
+
+password.addEventListener("keyup", function (key) {
+    if (key.key === "Enter") {
+        if ((username.value === "admin") && (password.value === "123456")) {
+            alert("Login successful!");
+            window.location.href = "product.html";
+        } else {
+            document.getElementById("notice").innerHTML = "Invalid username or password."
+        }
+    }
+})
