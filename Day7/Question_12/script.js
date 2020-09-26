@@ -16,7 +16,7 @@ let container = document.getElementById("list");
 for (let x of items) {
   container.insertAdjacentHTML(
     "beforeend",
-    `<li>${x} <button class="remove" onclick="remove(${items.indexOf(x)})" id="${items.indexOf(x)}">Remove</button> </li>`
+    `<li>${x} <button class="btn btn-danger onclick="remove(${items.indexOf(x)})" id="${items.indexOf(x)}">Remove</button> </li>`
   );
 }
 let addIndex = items.length
@@ -35,7 +35,7 @@ addButton.onclick = () => {
   console.log(newItem.value);
   container.insertAdjacentHTML(
     "beforeend",
-    `<li>${newItem.value} <button class="remove" onclick="remove(${addIndex})" id="${addIndex}">Remove</button> </li>`
+    `<li>${newItem.value} <button class="btn btn-danger" onclick="remove(${addIndex})" id="${addIndex}">Remove</button> </li>`
   );
   items.push(newItem.value);
   addIndex ++;

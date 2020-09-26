@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Belongings</title>
+    <style>
+      ul {
+        margin-top: 10px;
+      }
+      input {
+        margin-right: 5px;
+      }
+      li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Your Belongings</h1>
-    <input name="item" id="item_input" placeholder="New Item">
-    <button name="add" id="add_btn">Add</button>
-    <ul id="list"></ul>
+    <h1 class="text-primary text-center">Your Belongings</h1>
+    <div id="adder" class="d-flex justify-content-center">
+      <input name="item" type="text" id="item_input" placeholder="New Item" required>
+      <button name="add" id="add_btn" class="btn btn-primary">Add</button>
+    </div>
+    <div id="list_display" class="d-flex justify-content-center">
+      <ul id="list"></ul>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
