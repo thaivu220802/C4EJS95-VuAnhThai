@@ -17,7 +17,7 @@ let addIndex = items.length;
 function remove(num) {
   console.log("Remove");
   console.log(`Index: ${num}`);
-  items[num] = "";
+  items[num] = null;
   console.log(items);
   let remover = document.getElementById(`${num}`);
   remover.parentElement.remove();
