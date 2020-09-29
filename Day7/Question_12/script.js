@@ -1,7 +1,7 @@
 // Initialize a variable named items to store the data above, log/print it out
 
 let items = ["Backpack", "MiBand watch", "Ring"];
-
+let itemsNoNull = items.filter((x) => x != null);
 // In HTML, create an <ul> with some test items.
 let container = document.getElementById("list");
 for (let x of items) {
@@ -18,7 +18,8 @@ function remove(num) {
   console.log("Remove");
   console.log(`Index: ${num}`);
   items[num] = null;
-  console.log(items);
+  itemsNoNull = items.filter((x) => x != null);
+  console.log(itemsNoNull);
   let remover = document.getElementById(`${num}`);
   remover.parentElement.remove();
 }
@@ -43,5 +44,7 @@ addButton.onclick = () => {
     items.push(newItem.value);
     addIndex++;
     newItem.value = "";
+    itemsNoNull = items.filter((x) => x != null);
+    console.log(itemsNoNull);
   }
 };
